@@ -1,0 +1,80 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+body {
+    background-color: #eee;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: repeat(autofill, minmax(200px, 1fr));
+    gap: 10px 10px;
+    grid-template-areas:
+    "u1 u1 u2 u3"
+    "u4 u5 u5 u3"
+    "u4 u6 u6 u3"
+    "u7 u8 u9 u10";
+}
+
+article {
+    background-color: #fff;
+    border-bottom: 2px solid #FF3D00;
+}
+
+h4 {
+    padding-bottom: 7px;
+}
+
+h5 {
+    padding-top: 0;
+    opacity: 0.5;
+}
+
+.intro {
+    font-weight: bold;
+}
+
+.user-1 {
+    grid-area: u1;
+}
+
+.user-2 {
+    grid-area: u2;
+}
+
+.user-3 {
+    grid-area: u3;
+}
+
+.user-4 {
+    grid-area: u4;
+}
+
+.user-5 {
+    grid-area: u5;
+}
+
+.user-6 {
+    grid-area: u6;
+}
+
+.user-7 {
+    grid-area: u7;
+}
+
+.user-8 {
+    grid-area: u8;
+}
+
+.user-9 {
+    grid-area: u9;
+}
+
+.user-10 {
+    grid-area: u10;
+}
+

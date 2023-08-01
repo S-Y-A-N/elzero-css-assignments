@@ -1,0 +1,141 @@
+/* 
+    Transition:
+    - Duration
+    - Property
+    - Delay
+    - Timing Function
+*/
+
+:root {
+    --bgColor: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* for assign 3 */
+    --mainColor: #009688;
+    --mainPadding: 10px;
+}
+
+.one {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--bgColor, #eee);
+    width: 200px;
+    height: 100px;
+    /* Transition
+    transition-duration: 1s;
+    transition-delay: 200ms;
+    transition-property: width, margin-left;
+    transition-timing-function: ease;
+        shorthand
+    <property, duration> delay, time-func */
+    transition: width 1s, margin 500ms;
+}
+
+.one:hover {
+    margin: 20px;
+    width: 280px;
+}
+
+/* Margin Collapse */
+.parent {
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: var(--bgColor, #eee);
+}
+
+.child-one, .child-two {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.child-one {
+    background-color: #ddd;
+}
+
+.child-two {
+    background-color: #aaa;
+}
+
+.up, .down {
+    height: calc((200px - 10px) / 2);
+}
+
+/* Margin collapses here
+        margin is only 10px, not 20px
+    [1] Only vertical margins collapse! 
+    [2] Only if no other element in between,
+            but nesting is OK */
+.up {
+    background-color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.down {
+    background-color: lightgoldenrodyellow;
+    margin-top: 10px;
+}
+
+/* Assign 1 */
+.trans-parent {
+    background-color: var(--bgColor);
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    margin: 40px 10px 10px;
+    padding: 20px;
+    transition: margin-top 500ms;
+}
+
+.trans-parent .trans-child {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 10px auto;
+    transition: margin-top 500ms 500ms;
+}
+
+.trans-parent:hover {
+    margin-top: 20px;
+}
+
+.trans-parent:hover > .trans-child {
+    margin-top: 60px;
+}
+
+/* Assign 2 */
+.important {
+    content: "Elzero";
+    background-color: var(--bgColor, #eee) !important;
+    border: none !important;
+    width: 400px !important;
+    font-size: 20px !important;
+    font-weight: bold;
+    color: transparent !important;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.important::before {
+    visibility: visible;
+    content: "Elzero";
+    position: absolute;
+    color: black !important;
+    left: 0;
+    right: 0;
+}
+
+
+/* Assign 3 */
+.element {
+    border: 2px solid var(--mainColor, black);
+    padding: var(--mainPadding, 10px);
+    color: var(--mainColor, red);
+    width: 400px;
+    margin: 10px auto;
+}

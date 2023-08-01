@@ -1,0 +1,99 @@
+/* 
+    2D Transform Functions:
+    - scaleX, scaleY, scale()
+    - rotate() => deg, rad, grad, turn (360deg = 6.28rad = 400grad = 1turn)
+    - translate(x, y)
+*/
+
+body {
+    box-sizing: border-box;
+}
+
+/* Assign 1 */
+.box {
+    margin: 30px auto;
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+    color: #03A9F4;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 1px 1px #ddd inset;
+}
+
+.box::before {
+    content: "";
+    width: 300px;
+    height: 200px;
+    background-color: #03A9F4;
+    position: absolute;
+    transform: rotate(-5deg) translate(-3px, 0px);
+    z-index: -1;
+}
+
+.box::after {
+    content: "";
+    width: 300px;
+    height: 200px;
+    background-color: #E91E63;
+    position: absolute;
+    transform: rotate(5deg);
+    z-index: -2;
+}
+
+/* Assign 2 */
+.circle {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    box-shadow: 0 0 10px 5px #ddd inset;
+    border-radius: 50%;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.circle::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 10px solid #E91E63;
+    border-radius: 50%;
+    border-left-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    transition: all 0.5s;
+}
+
+.circle::after {
+    content: "";
+    width: 220px;
+    height: 220px;
+    background-color: transparent;
+    border: 10px solid #03A9F4;
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    transition: all 0.5s 0.5s;
+}
+
+.circle:hover::before, .circle:hover::after  {
+    transform: rotate(180deg);
+}

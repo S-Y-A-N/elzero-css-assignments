@@ -1,0 +1,109 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+/* Assign 1 */
+div {
+    margin: 10px auto;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #eee;
+}
+
+div:empty {
+    background-color: red;
+}
+
+/* Assign 2 */
+div.hello {
+    position: relative;
+    padding: 0 10px;
+    background-color: #D4D4D4;
+}
+
+div.hello::first-letter {
+    background-color: red;
+    color: white;
+    margin-left: -30px;
+    margin-right: 10px;
+    padding: 10px 5px;
+}
+
+/* Assign 3 */
+p {
+    position: relative;
+    margin: 10px auto;
+    padding: 10px;
+    padding-left: 20px;
+    width: 400px;
+    text-align: left;
+    background-color: #eee;
+}
+
+/* Triangle Shape */
+/* .person::before {
+    content: "";
+    position: absolute;
+    left: -19px;
+    border: 10px solid;
+    border-color: transparent #E91E63 transparent transparent;
+} */
+
+/* Custom Attr */
+.person::before {
+    content: attr(data-person);
+    width: 50px;
+    position: absolute;
+    left: -80px;
+    top: calc(50% - 17px);
+    background-color: #ddd;
+    padding: 7px;
+    text-align: center;
+}
+
+.person::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #E91E63;
+}
+
+/* Assign 4 */
+.numbered::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #F44336;
+}
+
+.numbered::before {
+    content: counter(increment-by-one);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    background-color: #F44336;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.numbered {
+    padding-left: 60px;
+    counter-increment: increment-by-one;
+}
+
+
+

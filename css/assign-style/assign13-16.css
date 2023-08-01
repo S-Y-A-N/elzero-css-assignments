@@ -1,0 +1,24 @@
+/* Assign 1 */
+div.parent div.child span.title {
+    color: red;
+}
+
+.parent span.title {
+    color: blue;
+}
+
+div.title, div.parent p {
+    color: green;
+}
+
+/* Assign 2 */
+.words div {
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    background-color: brown;
+    width: fit-content;
+    max-width: 400px;
+    max-height: 150px;
+    overflow-y: auto;
+}

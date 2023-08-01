@@ -1,0 +1,138 @@
+/*
+  --- Grid ---
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [No Of Cols] => [Px, %, Auto, Fr, Repeat(clmns, size)]
+  - grid-template-rows: [No Of Rows] => [Px, %, Auto, Fr, Repeat(rows, size)]
+  - gap: [Row Gap] [Column Gap]
+  - justiy-content, align-content
+  - grid-template-areas: ""
+  Child
+  - grid-column: [Col Start] [Col End]
+  - grid-row: [Row Start] [Row End]
+  - grid-area: [start: row, col -- end: row, col] OR [from grid-template-areas]
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+
+/* Assign 1 */
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  display: grid;
+  gap: 20px 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 6fr;
+
+}
+
+.grid div {
+  background-color: #607D8B;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Assign 3 */
+.grid-2 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr) auto;
+  grid-template-rows: 10fr 1fr;
+  gap: 20px 20px;
+}
+
+.grid-2 div {
+  background-color: #403F3F;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Assign 4 */
+.grid-3 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 20px 20px;
+}
+
+.grid-3 div {
+  background-color: #2196F3;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eight {
+  order: -1;
+  grid-area: 1 / span 3;
+}
+
+.two {
+  grid-area: 2 / span 2;
+}
+
+.four {
+  grid-area: 3 / 1;
+}
+
+.six {
+    grid-area: 4 / 1;
+}
+
+.seven {
+  grid-area: 5 / 1;
+}
+
+.five {
+  grid-area: span 3 / span 2;
+}
+
+.one {
+  order: 1;
+  grid-area: 6 / span 3;
+}
+
+/* Assign 5 */
+.grid-4 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px 20px;
+  align-content: space-between;
+}
+
+.grid-4 div {
+  background-color: #E91E63;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

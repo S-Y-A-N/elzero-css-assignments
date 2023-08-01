@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+
+/* Assign 1 */
+div {
+    width: 400px;
+    border: 3px solid rgb(255, 123, 0);
+    padding: 20px;
+    margin: 15px auto;
+}
+
+p {
+    border: inherit;
+    padding: inherit;
+    background-color: #eee;
+    margin: 0;
+}
+
+/* Assign 2 */
+h1 {
+    font-size: 7vw;
+}
+
+h1.title-1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1.title-2 {
+    font-family: 'Cairo', sans-serif;
+}
+
+h1.title-3 {
+    font-family: 'Jomhuria', cursive;
+    letter-spacing: 3px;
+}
+
+/* Assign 3 */
+h2.title-1 {
+    font-size: 2.5rem;
+}
+
+h2.title-2 {
+    font-size: 2rem;
+}
+
+h2.title-3 {
+    font-size: 1.5rem;
+}
+

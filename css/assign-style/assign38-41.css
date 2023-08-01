@@ -1,0 +1,144 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shadow {
+    padding: 20px;
+    background-color: #eee;
+    margin: 20px auto;
+    width: 300px;
+    /* H-shadow | V-shadow | blur | spread | color | inset */
+    box-shadow: 0 0  0 0 #ddd inset;
+}
+
+/* Box Model & Box Sizing */
+.parent {
+    overflow: hidden;
+    padding: 20px;
+    background-color: #eee;
+    margin: 10px auto;
+    width: 620px;
+}
+
+.one {
+    background-color: #ddd;
+    width: 300px;
+    float: left;
+    padding: 10px;
+    border: 5px solid #bbb;
+    box-sizing: border-box;
+}
+
+/* Assign 1 */
+.circle {
+    float: left;
+    margin: 20px;
+    padding: 10px;
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    box-shadow: -5px -5px 0 0 #E91E63, 5px 5px 0 0 #2196F3;
+}
+
+.circle-parent {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* Assign 2 */
+.eye-shape {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    background-color: #efefef;
+    /* Short Form */
+    /* border-radius: 10px 40% / 20px 40%; */
+    border-radius: 40%;
+    border-top-left-radius: 10px 20px;
+    border-bottom-right-radius: 10px 20px;
+    /* Box Shadow */
+    box-shadow: 0px 0px 20px 1px #aaa inset;
+}
+
+/* Assign 3 */
+.plan-parent {
+    margin: 20px auto;
+    width: 550px;
+}
+
+.basic-conatiner, .pro-container {
+    position: relative;
+    float: left;
+    background-color: #eee;
+    width: 40%;
+    height: 250px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: -3px -3px 10px 4px #ddd inset;
+}
+
+.basic-title, .pro-title {
+    background-color: #03A9F4;
+    width: 150px;
+    height: 50px;
+    margin: 15px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: -3px -3px 10px 4px #009ce5 inset,
+    5px 5px 7px 0px #ddd;
+}
+
+.basic-price, .pro-price {
+    background-color: #ddd;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    box-shadow: -3px -3px 10px 4px #ccc inset;
+}
+
+.basic-conatiner::after {
+    content: "";
+    background-color: #2196F3;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    right: -20px; /* margin is 20px */
+    top: 0;
+}
+
+.pro-container::before {
+    content: "Or";
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #2196F3;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -30px; /* full margin is 40px, 20px left & right */
+    top: 125px; /* containers' height is 250px */
+    border-radius: 50%;
+}

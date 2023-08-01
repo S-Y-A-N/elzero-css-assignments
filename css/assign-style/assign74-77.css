@@ -1,0 +1,291 @@
+/*
+  Animation
+  - KeyFrames
+  - Name
+  - Duration
+  - Iteration Count
+  - Timing Function
+  - Direction => normal, reverse, alternate, alternate-reverse
+  - Delay
+  - Fill Mode => forwards, backwards, both
+  - Play State => running, paused
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+  }
+
+  .color-change {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+
+    /* animation-name: change-color;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-fill-mode: both; */
+    animation: change-color 5s 2s both;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: rgb(255, 70, 100);
+    }
+    20% {
+        background-color: rgb(255, 170, 100);
+    }
+    40% {
+        background-color: rgb(255, 255, 100);
+    }
+    60% {
+        background-color: lightgreen;
+    }
+    80% {
+        background-color: lightblue;
+    }
+    100% {
+        background-color: violet;
+    }
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 5px solid #673ab7;
+    border-left-color: transparent;
+
+    /* animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-play-state: paused; */
+    animation: spin 3s infinite linear paused;
+}
+
+.spinner:hover {
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.load {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto;
+}
+
+.load div {
+    width: 20px;
+    height: 20px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    margin: 0 5px;
+
+    animation: up-and-down 0.9s infinite alternate;
+}
+
+.load .two {
+    animation-delay: 0.3s;
+}
+
+.load .three {
+    animation-delay: 0.6s;
+}
+
+@keyframes up-and-down {
+    to {
+        opacity: 0.2;
+        transform: translateY(-20px);
+    }
+}
+
+.container {
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+.E-shape, .L-shape {
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, auto);
+    position: relative;
+}
+
+.E-shape {
+    grid-template-areas:
+    "l t t t"
+    "l n1 n1 n1"
+    "l n1 n1 n1"
+    "l c c c"
+    "l n2 n2 n2"
+    "l n2 n2 n2"
+    "l b b b";
+}
+
+.E-shape div {
+    background-color: #fff;
+}
+
+.e-top {
+    grid-area: t;
+    border-radius: 0 5px 5px 0;
+}
+
+.e-center {
+    grid-area: c;
+    border-radius: 0 5px 5px 0;
+}
+
+.e-bottom {
+    grid-area: b;
+    border-radius: 0 5px 5px 0;
+}
+
+.e-leg {
+    grid-area: l;
+    border-radius: 5px 0 0 5px;
+}
+
+.none-1 {
+    grid-area: n1;
+    background-color: transparent !important;
+}
+
+.none-2 {
+    grid-area: n2;
+    background-color: transparent !important;
+}
+
+.L-shape {
+    grid-template-areas:
+    "l1 n3 n3 n3"
+    "l1 n3 n3 n3"
+    "l1 n3 n3 n3"
+    "l1 n3 n3 n3"
+    "l1 n3 n3 n3"
+    "l1 n3 n3 n3"
+    "l1 b1 b1 b1";
+}
+
+.L-shape div {
+    background-color: #fff;
+}
+
+.l-bottom {
+    grid-area: b1;
+    border-radius: 0 5px 5px 0;
+}
+
+.l-leg {
+    grid-area: l1;
+    border-radius: 5px 5px 0 5px;
+}
+
+.none-3 {
+    grid-area: n3;
+    background-color: transparent !important;
+}
+
+.E-shape::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #b71c1c;
+    border-radius: 50%;
+    position: absolute;
+
+    animation: E-dot 7s linear both;
+}
+
+.L-shape::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #b71c1c;
+    border-radius: 50%;
+    position: absolute;
+
+    opacity: 0;
+    animation: L-dot 3s 7s linear both reverse;
+}
+
+@keyframes E-dot {
+    0% {
+        transform: translate(162px, 6px);
+    }
+    11% {
+        transform: translate(10px, 6px);
+    }
+    22% {
+        transform: translate(10px, 135px);
+    }
+    33% {
+        transform: translate(162px, 135px);
+    }
+    44% {
+        transform: translate(10px, 135px);
+    }
+    55% {
+        transform: translate(10px, 260px);
+    }
+    66% {
+        transform: translate(162px, 260px)
+    }
+    77% {
+        transform: translate(10px, 260px);
+    }
+    88% {
+        transform: translate(10px, 6px);
+    }
+    100% {
+        transform: translate(162px, 6px);
+    }
+}
+
+@keyframes L-dot {
+    0% {
+        opacity: 0;
+        transform: translate(10px, 6px);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(10px, 6px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(10px, 261px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(162px, 261px)
+    }
+}

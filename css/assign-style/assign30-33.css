@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* Assign 1 */
+.container div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.container {
+    position: relative;
+    background-color: rgb(85, 85, 85);
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+}
+
+.green {
+    background-color: rgb(0,150,136);
+    z-index: 9;
+    top: 30px;
+    left: 30px;
+}
+
+.red {
+    background-color: rgb(244,67,54);
+    z-index: 10;
+    top: 40px;
+    left: 40px;
+}
+
+.blue {
+    background-color: rgb(3,169,244);
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+}
+
+.black {
+    background-color: rgb(51,51,51);
+    z-index: 0;
+    top: 30px;
+    left: 20px;
+}
+
+/* Assign 2 */
+.text {
+    width: 400px;
+    background-color: #eee;
+    padding: 20px;
+    border: 3px solid;
+    border-color: rgb(244,67,54) rgb(33,150,243);
+    position: relative;
+}
+
+span {
+    background-color: rgb(33,150,243);
+    color: white;
+    padding: 2px 10px;
+    position: absolute;
+}
+
+.top-left {
+    top: -10px;
+    left: -10px;
+    border-right: 3px solid rgb(244,67,54);
+}
+
+.top-right {
+    top: -10px;
+    right: -10px;
+    border-left: 3px solid rgb(244,67,54);
+}
+
+.bottom-left {
+    bottom: -10px;
+    left: -10px;
+    border-right: 3px solid rgb(244,67,54);
+}
+
+.bottom-right {
+    bottom: -10px;
+    right: -10px;
+    border-left: 3px solid rgb(244,67,54);
+}
+
+/* Assign 3 */
+.main-list {
+    list-style: none;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.list-title {
+    background-color: #eee;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.list-items li {
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.css-list {
+    list-style-type: upper-roman;
+}
+
+.js-list li {
+    list-style-position: none;
+    list-style-type: circle;
+    background-color: white;
+}
+
+/* Assign 4 */
+table {
+    margin: 20px auto;
+    width: 900px;
+    text-align: center;
+}
+
+thead td {
+    padding: 15px 0;
+    background-color: #404040;
+    color: white;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 10px 0;
+    background-color: #eee;
+}
+
+button {
+    border: none;
+    color: #fff;
+    font-style: inherit;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.view-btn {
+    background-color: #03A9F4;
+    margin-right: 5px;
+}
+
+.del-btn {
+    background-color: #E91E63;
+}
+
+td img {
+    border: 2px solid #b2b2b2;
+}
+
+caption {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,46 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.assign-1 {
+    font-size: 20px;
+    display: inline-block;
+    background-color: #EEE;
+    padding: 40px;
+    margin: 20px;
+    outline: 10px solid black;
+}
+
+.assign-1-shape-1 {
+    border: 10px solid red;
+}
+
+.assign-1-shape-2 {
+    border: 10px solid;
+    border-color: blue green;
+}
+
+.assign-1-shape-3 {
+    border: 10px dashed;
+    border-color: red green blue yellow;
+}
+
+.assign-2 {
+    width: 400px;
+    background-color: #EEE;
+    outline: 15px solid #EEE;
+    padding: 15px;
+    margin: 20px;
+}
+
+.assign-2-shape-1 {
+    border-left: 10px solid mediumvioletred;
+}
+
+.assign-2-shape-2 {
+    visibility: hidden;
+}
+
+.assign-2-shape-3 {
+    border-left: 10px solid mediumseagreen;
+}
